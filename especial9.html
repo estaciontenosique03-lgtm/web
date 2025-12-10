@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--1.Link para los iconos de la tabla-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!---->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turista Especial</title>
+  
+  <style>
+    body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('fondo.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      padding: 40px 20px 150px;
+    }
+
+    h1 {
+     color: #004d40;
+      font-family: "Tilt Prism", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: bold;
+      font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+      font-size: 60px;
+    }
+
+    table {
+     width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+      font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+      max-width: 950px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(5px);
+    }
+     /* ---Estilos para las filas de contenido (todas menos la primera)--- */
+    table tr:not(:first-child) {
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, margin 0.2s ease-in-out;
+    }
+    table tr:not(:first-child):hover {
+      background-color: #c8e6c9!important; 
+      cursor: pointer; 
+      font-weight: bold; 
+      transform: scale(1.01);     
+      transform-origin: center;       
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      margin: 1px 0; 
+      z-index: 10; 
+    }
+    table tr:not(:first-child):hover td {
+      background-color: transparent !important;
+      border-right: 1px solid #b2dfdb;
+    }
+
+     th {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 1.1em;
+      background: linear-gradient(135deg, #00897b, #004d40);
+    }
+
+    td {
+      background-color: #f5fffd;
+      padding: 12px 20px;
+      border-bottom: 1px solid #b2dfdb; 
+      color: #00332c;
+      border-right: 1px solid #b2dfdb;
+    }
+     td:last-child {
+      border-right: none;
+    }
+
+   /* --- BOTÓN --- */
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 25px;
+      background: linear-gradient(135deg, #004d40, #00796b);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    a:hover {
+      background: linear-gradient(135deg, #00332c, #00574b);
+      transform: scale(1.05);
+    }
+
+
+    /* --- ICONOS Y RUTA --- */
+   .icono-tren {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0; 
+    }
+    .icono-tren img {
+      width: 60px;
+      height: auto;
+      display: block;
+    }
+
+
+    .ruta {
+       display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 1px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .ruta img {
+      width: 48px;
+      height: auto;
+    }
+
+    .flecha {
+      font-size: 35px;
+      font-weight: 900;
+      color: #000000;
+    }
+    /* --- IMAGEN DE FONDO DECORATIVA --- */
+    .decoracion {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 250px;
+      opacity: 0.3;
+      clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 80%);
+      filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.4));
+      pointer-events: none; /* ✅ Esto permite hacer scroll normal */
+      z-index: -1;
+    }
+  </style>
+
+
+</head>
+<body>
+  <h1>TURISTA ESPECIAL</h1>
+  <h2>Ruta de:</h2>
+  <!-- Icono de tren centrado -->
+  <div class="icono-tren">
+    <img src="https://images.vexels.com/media/users/3/153368/isolated/preview/6b8f5897c8425061ba3d29068be31e33-icono-de-trazo-de-color-de-tren.png" alt="Tren">
+  </div>
+
+  <!-- Título con logos y flecha -->
+  <div class="ruta">
+     <img src="tenosique.png" alt="tenosique">
+    <span>Tenosique</span>
+    <span class="flecha">→</span>
+    <span>Tenabo</span>
+    <img src="tenabo.png" alt="tenabo">
+  </div>
+
+  <!-- 2.Tabla con los simbolos-->
+  <table>
+    <tr>
+      <th><i class="fas fa-map-marked-alt"></i> Corridas</th>
+      <th><i class="fas fa-train"></i> Hora de salida</th>
+      <th><i class="fas fa-train-subway"></i> Hora de llegada</th>
+      <th><i class="fas fa-dollar-sign"></i> Precio</th>
+      <th><i class="fas fa-clock"></i> Duración</th>
+      <th><i class="fas fa-route"></i> Paradas</th>
+    </tr>
+    
+    <tr>
+      <td>1.</td>
+      <td>8:21 am.</td>
+      <td>12:51 pm.</td>
+      <td>$486.50.</td>
+      <td>4 hrs 30 min.</td>
+      <td>6 paradas.</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>9:46 am.</td>
+      <td>2:34 pm.</td>
+      <td>$486.50.</td>
+      <td>4 hrs 48 min.</td>
+      <td>6 paradas.</td>
+    </tr>
+  </table>
+
+  <head>
+  <h2>Ruta de:</h2>
+  </head>
+   
+     <!-- Icono de tren centrado -->
+  <div class="icono-tren">
+    <img src="https://images.vexels.com/media/users/3/153368/isolated/preview/6b8f5897c8425061ba3d29068be31e33-icono-de-trazo-de-color-de-tren.png" alt="Tren">
+  </div>
+
+ <!-- Título con logos y flecha -->
+  <div class="ruta">
+    <img src="tenabo.png" alt="tenabo">
+    <span>Tenabo</span>
+    <span class="flecha">→</span>
+    <span>Tenosique</span>
+     <img src="tenosique.png" alt="tenosique">
+  </div>
+  
+
+
+<!--3.Tabla con los simbolos-->
+  <table>
+    <tr>
+      <th><i class="fas fa-map-marked-alt"></i> Corridas</th>
+      <th><i class="fas fa-train"></i> Hora de salida</th>
+      <th><i class="fas fa-train-subway"></i> Hora de llegada</th>
+      <th><i class="fas fa-dollar-sign"></i> Precio</th>
+      <th><i class="fas fa-clock"></i> Duración</th>
+      <th><i class="fas fa-route"></i> Paradas</th>
+    </tr>
+
+    <tr>
+      <td>1.</td>
+      <td>12:33 pm.</td>
+      <td>5:16 pm.</td>
+      <td>$486.50.</td>
+      <td>4 hrs 43 min.</td>
+      <td>6 paradas.</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>1:57 pm.</td>
+      <td>6:45 pm.</td>
+      <td>$486.50.</td>
+      <td>4 hrs 48 min.</td>
+      <td>6 paradas.</td>
+    </tr>
+  </table>
+
+<a href="turista-especial.html">⬅ Regresar</a>
+</body>
+</html>

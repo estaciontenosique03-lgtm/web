@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conoce la estación</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    body {
+      font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('fondo.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      padding: 40px 20px 150px;
+    }
+
+    
+    h1 {
+    font-size: 55px;
+      color: #004d40;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.45);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+/* línea decorativa bajo subtítulos */
+    h2::after {
+      content:"";
+      width: 140px;
+      height: 4px;
+      background:#00897b;
+      display:block;
+      margin:10px auto 25px;
+      border-radius:10px;
+    
+  
+  }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+      .gallery div {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      transition: transform .35s, box-shadow .35s;
+    }
+
+    .gallery div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      border-bottom: 4px solid #009688;
+    }
+
+   .gallery span {
+      display: block;
+      padding: 14px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #004d40;
+    }
+
+  
+
+      .btn-regresar {
+      margin-top: 40px;
+      padding: 14px 32px;
+      background: linear-gradient(145deg, #004d40, #00796b);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition:.3s;
+      }
+
+ .btn-regresar:hover {
+      background: linear-gradient(145deg, #00695c, #004d40);
+      transform: scale(1.08);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Conoce la Estación Tenosique</h1>
+
+  <!-- ⭐ PLANTA BAJA -->
+  <h2>PLANTA BAJA</h2>
+  <div class="gallery">
+    <div><img src="tenosique.jpeg" alt="Imagen 1"><span>Estación Tenosique</span></div>
+    <div><img src="imagen2.jpg" alt="Imagen 2"><span>Estacionamientos</span></div>
+    <div><img src="imagen3.jpg" alt="imagen3.jpg"><span>Baños</span></div>
+    <div><img src="imagen4.jpg" alt="Imagen 4"><span>Elevadores</span></div>
+    <div><img src="imagen5.jpg" alt="Imagen 5"><span>Escaleras Electricas</span></div>
+    <div><img src="imagen6.jpg" alt="Imagen 6"><span>Rampa</span></div>
+    <div><img src="imagen7.jpg" alt="Imagen 7"><span>Escaleras Convencionales</span></div>
+  </div>
+
+  <!-- ⭐ PLANTA ALTA -->
+  <h2>PLANTA ALTA</h2>
+  <div class="gallery">
+    
+    <div><img src="imagen8.jpg" alt="Imagen 8"><span>Atención a cliente</span></div>
+    <div><img src="imagen9.jpg" alt="Imagen 9"><span>Taquilla</span></div>
+    <div><img src="imagen10.jpg" alt="Imagen 10"><span>Revición por la GN</span></div>
+    <div><img src="imagen11.jpg" alt="Imagen 11"><span>Sala de Espera</span></div>
+    <div><img src="imagen12.jpg" alt="Imagen 12"><span>Baños</span></div>
+    <div><img src="imagen13.jpg" alt="Imagen 13"><span>Torniquetes</span></div>
+    <div><img src="imagen14.jpg" alt="Imagen 14"><span>Andén</span></div>
+  </div>
+
+  <a href="index.html" class="btn-regresar">⬅ Regresar</a>
+
+</body>
+</html>
