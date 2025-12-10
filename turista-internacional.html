@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turista Internacional</title>
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+   
+        body {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        background: #f5f5f5; 
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        min-height: 100vh;
+        background-image: url('maya.jpg'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center; 
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.4); 
+    }
+h1 {
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 50px;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: #D4AF37; 
+    font-family: "Inter", sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; 
+}
+
+.hero-background {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center; 
+    
+    padding: 25px 170px; 
+  
+    border-radius: 20px; 
+    margin: 20px auto; 
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(5px);
+    background-image: none; 
+}
+.hero-header {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+    width: 100%; 
+    justify-content: center;
+}
+
+.hero-background .warning-icon {
+    width: 60px; 
+    height: auto; 
+    margin-right: 15px; 
+}
+
+.hero-background p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); 
+
+}
+.search-container {
+    margin: 10px auto 30px auto; 
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+#destinationSearch {
+    width: 100%; 
+    padding: 15px;
+    border: 2px solid #004d40;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-family: "Inter", sans-serif;
+    background-color: rgba(255, 255, 255, 0.85); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s;
+}
+
+#destinationSearch:focus {
+    outline: none;
+    border-color: #D4AF37; 
+}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    .grid a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #004d40;
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: #004d40;
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+      background-color: transparent;
+    }
+   
+
+    .grid a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: #c8e6c9;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      z-index: -1;
+    }
+    
+    .grid a:hover,
+    .grid a:focus-visible,
+    .grid a:focus {
+    
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+      color: white;
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-style: bold;
+    }
+
+    .grid a:hover::before,
+    .grid a:focus-visible::before,
+    .grid a:focus::before {
+      background-color: rgba(0, 77, 64, 0);
+    }
+
+    a.return-button {
+      display: block;
+      width: fit-content;
+      margin: 20px auto 30px auto; 
+      padding: 10px 20px;
+      background: #004d40;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+}
+
+a.return-button:hover {
+    background: #00695c;
+ }
+
+  @media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    
+    .hero-background {
+        padding: 15px 15px; 
+        margin: 15px auto;
+        max-width: 70%; 
+    }
+    
+    .hero-background .warning-icon {
+        width: 40px;
+    }
+
+    .hero-background p {
+        font-size: 0.9em; 
+    }
+    
+    .search-container {
+        max-width: 70%; 
+        margin-top: 5px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .grid a {
+        height: 55px;
+        font-size: 0.75em;
+        padding: 5px;
+    }
+    body {
+        background-size: cover !important; 
+        background-position: center top !important; 
+    }
+  }
+    /* CLASES ESPECÍFICAS PARA CADA IMAGEN DE FONDO */
+.palenque { background-image: url('palenque1.jpeg'); }
+    .boca-del-cerro { background-image: url('boca2.jpg'); }
+    .el-triunfo { background-image: url('el triunfo3.jpg'); }
+    .candelaria { background-image: url('candelaria4.jpg'); }
+    .escarcega { background-image: url('escarcega5.jpeg'); }
+    .carrillo-puerto { background-image: url('champoton6.jpg'); }
+    .edzna { background-image: url('edzna7.jpeg'); }
+    .san-fco-campeche { background-image: url('san fco8.png'); }
+    .tenabo { background-image: url('tenabo9.jpeg'); }
+    .hecelchakan{ background-image: url('hecelchakan10.jpg'); }
+    .calkini { background-image: url('calkiní11.jpg'); }
+    .maxcanu { background-image: url('maxcanú12.jpg'); }
+    .uman { background-image: url('umán13.jpg'); }
+    .merida-teya { background-image: url('merida14.jpeg'); }
+    .tixkokob { background-image: url('tixkokob15.jpg'); }
+    .izamal { background-image: url('izamal16.jpg'); }
+    .chichen-itza { background-image: url('chichen17.jpg'); }
+    .valladolid { background-image: url('valladolid18.jpg'); }
+    .nuevo-xcan { background-image: url('xcan19.jpg'); }
+    .leona-vicario { background-image: url('leonavicario20.jpg'); }
+    .cancun-aeropuerto { background-image: url('cancun21.jpg'); }
+    .centenario { background-image: url('centenario22.jpg'); }
+    .calakmul { background-image: url('calakmul23.jpg'); }
+    .xpujil { background-image: url('xpujil24.jpg'); }
+    .kohunlich { background-image: url('kohunlich25.jpg'); }
+    .chetu-aeropuerto { background-image: url('chetumal26.jpeg'); }
+    .bacalar { background-image: url('bacalar27.jpg'); }
+ </style>
+
+</head>
+<body style="background-image: url('turista_internacional_1.png'); background-repeat: no-repeat; background-size: cover;">
+  <h1>Turista Internacional</h1>
+  <div class="hero-background">
+  <div class="hero-header">
+    <img src="advertencia.png" alt="Icono de Advertencia" class="warning-icon">
+    <h3>AVISO IMPORTANTE:</h3>
+  </div>
+  
+  <p>◈ En caso de viajar con niños menores de 2 años, no generan costo, pero se debe informar que abordarán.</p>
+  <p>◈ Al comprar boletos, será necesario presentar alguna de las identificaciones mencionadas, de igual manera llevarla el día del viaje.
+  <p>◈ Los precios de los boletos pueden cambiar en cualquier momento.</p>
+</div>
+  <h3>Selecciona a dónde quieres viajar:</h3>
+  <div class="search-container">
+    <input type="text" id="destinationSearch" placeholder="🔍 Busque su destino (Ej: Cancún)">
+</div>
+  <br>
+
+  <div class="grid">
+    <a href="turista_internacional1.html" class="palenque">Palenque</a>
+    <a href="turista_internacional2.html" class="boca-del-cerro">Boca del Cerro</a>
+    <a href="turista_internacional3.html" class="el-triunfo">El Triunfo</a>
+    <a href="turista_internacional4.html" class="candelaria">Candelaria</a>
+    <a href="turista_internacional5.html" class="escarcega">Escárcega</a>
+    <a href="turista_internacional6.html" class="carrillo-puerto">Carrillo Puerto</a>
+    <a href="turista_internacional7.html" class="edzna">Edzná</a>
+    <a href="turista_internacional8.html" class="san-fco-campeche">San Fco. Campeche</a>
+    <a href="turista_internacional9.html" class="tenabo">Tenabo</a>
+    <a href="turista_internacional10.html" class="hecelchakan">Hecelchakán</a>
+    <a href="turista_internacional11.html" class="calkini">Calkini</a>
+    <a href="turista_internacional12.html" class="maxcanu">Maxcanú</a>
+    <a href="turista_internacional13.html" class="uman">Umán</a>
+    <a href="turista_internacional14.html" class="merida-teya">Mérida Teya</a>
+    <a href="turista_internacional15.html" class="tixkokob">Tixkokob</a>
+    <a href="turista_internacional16.html" class="izamal">Izamal</a>
+    <a href="turista_internacional17.html" class="chichen-itza">Chichén Itzá</a>
+    <a href="turista_internacional18.html" class="valladolid">Valladolid</a>
+    <a href="turista_internacional19.html" class="nuevo-xcan">Nuevo Xcán</a>
+    <a href="turista_internacional20.html" class="leona-vicario">Leona Vicario</a>
+    <a href="turista_internacional21.html" class="cancun-aeropuerto">Cancún Aeropuerto</a>
+    <a href="turista_internacional22.html" class="centenario">Centenario</a>
+    <a href="turista_internacional23.html" class="calakmul">Calakmul</a>
+    <a href="turista_internacional24.html" class="xpujil">Xpujil</a>
+    <a href="turista_internacional25.html" class="kohunlich">Nicolás Bravo</a>
+    <a href="turista_internacional26.html" class="chetu-aeropuerto">Chetumal Aeropuerto</a>
+    <a href="turista_internacional27.html" class="bacalar">Bacalar</a>
+  </div>
+</table>
+  <a href="index.html"class="return-button">⬅ Regresar</a>
+<script>
+
+    function normalizeText(text) {
+        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('destinationSearch');
+        const gridItems = document.querySelectorAll('.grid a');
+
+        searchInput.addEventListener('keyup', () => {
+            const searchTerm = normalizeText(searchInput.value);
+
+            gridItems.forEach(item => {
+                const normalizedText = normalizeText(item.textContent);
+                if (normalizedText.startsWith(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+   
+</body>
+
+</html>
